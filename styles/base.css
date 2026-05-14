@@ -1,4 +1,19 @@
-/* Title Style */
+/* --- Global Styles --- */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%; 
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6; 
+    color: #333;
+    margin: 0;
+}
+
+/* --- Header & Navigation --- */
 #course-title {
     display: block; 
     text-align: center;
@@ -19,14 +34,12 @@ nav ul {
     justify-content: space-evenly;
     padding: 1rem;
     margin: 0;
-    max-width: 5000px; 
-    margin: 0 auto;    
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: 1000;
+    font-weight: bold;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s;
 }
@@ -36,79 +49,100 @@ nav a:hover {
     border-radius: 5px;
 }
 
-body {
-    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6; 
-    color: #333;      
-}
-
+/* --- Main Content Layout --- */
 main {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 30px;
-    max-width: 1200px; 
-    margin: 40px auto; 
-    padding: 0 20px;
-    align-items: stretch; 
+    flex: 1; 
 }
 
 main h1 {
-    grid-column: 1 / 3; 
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
+/* Grid container for the 2-column layout */
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Wider left column, narrower right column */
+    gap: 30px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+/* Stacks Location and Resources on the right */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* --- Card Styling --- */
 .card {
     border: 1px solid #d1d1d1;
     background-color: #fff;
     border-radius: 8px;   
     overflow: hidden;      
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    padding: 0 0 20px 0; 
     display: flex;
     flex-direction: column;
-}
-
-.card p {
-    padding: 0 20px; 
-    margin: 10px 0;
+    padding-bottom: 20px;
 }
 
 .card h2 {
     background-color: #1d4e7a; 
     color: white;
     padding: 10px;
-    margin-top: 0; 
+    margin: 0; 
     text-align: center;
 }
 
-.card img {
-    display: block;
-    margin: 15px auto;
-    width: 350px; 
-    max-width: 400px;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,15);
+.card p {
+    padding: 15px 20px; 
+    margin: 0;
 }
 
-.mexico-city-temple {
-    width: 90% !important;    
-    max-width: 400px !important; 
-    height: 220px !important;   
-    object-fit: cover;          
+/* Resources List Styling */
+.card ul {
+    padding: 0 20px 0 40px;
+    margin: 10px 0;
+}
+
+.card ul li {
+    margin: 8px 0;
+}
+
+.card ul li a {
+    color: #1d4e7a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card ul li a:hover {
+    text-decoration: underline;
+}
+
+/* --- Images --- */
+.profile-photo, .mexico-city-temple {
     display: block;
-    margin: 15px auto;          
+    margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 90%;
+    height: auto;
 }
 
+/* Specific size for temple to match the example height */
+.mexico-city-temple {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Footer --- */
 footer {
     background-color: #1d4e7a;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
     border-top: 5px solid #0292ae;
 }
 
@@ -116,4 +150,11 @@ footer {
     color: #ffff00; 
     font-size: 1rem;
     margin-top: 10px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 850px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
 }

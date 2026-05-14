@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esto arregla el error de SEO de Lighthouse -->
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course home page for Luis Pardo, featuring creative projects and web development resources.">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
     <title>WDD 131 – Dynamic Web Fundamentals – Luis Pardo</title>
@@ -21,16 +23,32 @@
     </header>
     <main>
         <h1>Luis Pardo</h1>
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/me.jpeg" alt="Photo of Luis Pardo" class="profile-photo">
-            <p>I am a creative director, photographer, and filmmaker with a passion for visual storytelling. My work focuses on minimalist and modern aesthetics through my audiovisual studio, ISO Libre. Currently, I am expanding my horizons by studying Software Development and Computer Science, aiming to merge creative arts with technical innovation.</p>
-        </section>
-        <section class="card">
-            <h2>Location</h2>
-            <img src="images/temple.jpeg" alt="White Mexico City temple" class="mexico-city-temple">
-            <p>Based in Mexico City, Mexico. This vibrant metropolis serves as a constant source of inspiration for my photography and film projects. From its rich historical architecture to its bustling urban energy, Mexico City is where I manage my creative agency and pursue my academic degrees.</p>
-        </section>
+        <div class="main-container">
+            
+            <section class="card about-card">
+                <h2>About Me</h2>
+                <img src="images/me.jpeg" alt="Photo of Luis Pardo" class="profile-photo">
+                <p>I am a creative director, photographer, and filmmaker with a passion for visual storytelling. My work focuses on minimalist and modern aesthetics through my audiovisual studio, ISO Libre. Currently, I am expanding my horizons by studying Software Development and Computer Science, aiming to merge creative arts with technical innovation.</p>
+            </section>
+
+            <div class="right-column">
+                <section class="card">
+                    <h2>Location</h2>
+                    <img src="images/temple.jpeg" alt="White Mexico City temple" class="mexico-city-temple">
+                    <p>Based in Mexico City, Mexico. This vibrant metropolis serves as a constant source of inspiration for my photography and film projects.</p>
+                </section>
+
+                <section class="card">
+                    <h2>Web Dev Resources</h2>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
     </main>
     <footer>
         <p>
