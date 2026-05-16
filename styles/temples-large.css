@@ -1,0 +1,54 @@
+/* 1. DISABLE MOBILE LAYOUT CONTROLS */
+/* Hides the mobile hamburger button as it is no longer needed on desktop layouts */
+#menu {
+    display: none;
+}
+
+/* 2. HEADER RESTRUCTURE */
+header {
+    display: flex;
+    justify-content: space-between; /* Positions title on the left and navigation link structure to the right */
+    align-items: center; /* Centers all elements vertically */
+    padding: 1rem 5%; /* Generates wider lateral gutters for a premium widescreen aesthetic */
+    text-align: left; /* Aligns header title text to the left margin */
+}
+
+header h1 {
+    margin-bottom: 0; /* Remaps bottom spacing applied on the mobile layout view */
+}
+
+/* 3. TRANSFORMS MENU TO HORIZONTAL ROW DIRECTION */
+.navigation {
+    display: flex; /* Navigation remains constantly visible on widescreen viewports */
+    flex-direction: row; /* Aligns menu link items side by side */
+    background-color: transparent; /* Removes the mobile layout background wrapper color */
+    margin-top: 0;
+}
+
+.navigation a {
+    padding: 0.5rem 1rem; /* Compact layout button sizing for desktop optimization */
+}
+
+.navigation a:hover {
+    background-color: transparent; 
+    color: #9c77eb3c; 
+}
+
+/* 4. 3-COLUMN LAYOUT DESKTOP GRID SYSTEM */
+/* Expands main element canvas size to safely accommodate three columns side-by-side */
+main {
+    max-width: 1100px; /* Limits the gallery structural container footprint width */
+    margin: 2rem auto; /* Vertical spacing separation and horizontal auto-centering layout */
+    padding: 0 2rem;
+}
+
+/* Transitions the layout system architecture from a single 1fr layout to 3 structural columns */
+.grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Generates THREE equal-width fractions grid layout */
+    gap: 2rem; /* Enhanced spacing layout distribution between item elements */
+}
+
+/* Controls aspect ratio optimization for desktop display viewports */
+figure img {
+    height: 200px; /* Adapts layout image element bounds for panoramic display */
+}

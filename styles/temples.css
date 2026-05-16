@@ -1,0 +1,134 @@
+/* 1. GENERAL RESET AND TYPOGRAPHY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 2. HEADER AND MOBILE MENU DESIGN */
+header {
+    background-color: #1b263b;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative; /* Allows the menu button to position absolutely relative to the header */
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hamburger menu button */
+#menu {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Pseudo-elements to toggle icons without modifying HTML */
+#menu::before {
+    content: "☰"; /* Default hamburger icon */
+}
+
+#menu.open::before {
+    content: "❌"; /* Changes to an X icon when JS toggles the 'open' class */
+}
+
+/* Mobile navigation list */
+.navigation {
+    list-style: none;
+    display: none; /* Hides the menu by default on mobile views */
+    flex-direction: column;
+    background-color: #0d1b2a;
+    margin-top: 1rem;
+}
+
+/* This rule triggers only when JavaScript injects the 'open' class */
+.navigation.open {
+    display: flex; /* Displays the menu items in vertical rows */
+}
+
+.navigation a {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #415a77; /* Hover effect for user visual feedback */
+}
+
+/* 3. MAIN CONTAINER AND IMAGE GRID */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1b263b;
+}
+
+/* Responsive grid layout (1 column on mobile viewports) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout filling the complete width */
+    gap: 1.5rem; /* Clean spacing between image cards */
+}
+
+/* Temple cards visual styling */
+figure {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Clips image corners to match the border-radius wrapper */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+figure img {
+    width: 100%; /* Forces the image to responsive scale to the card container size */
+    height: 250px;
+    object-fit: cover; /* Uniformly crops images to prevent distortion or stretching */
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    color: #1b263b;
+}
+
+/* 4. FOOTER STYLING */
+footer {
+    background-color: #1b263b;
+    color: #778da9;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer span, footer p {
+    color: #fff;
+}

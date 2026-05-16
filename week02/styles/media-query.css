@@ -1,0 +1,29 @@
+/* Body styles with Roboto font */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Common styles for layout containers */
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: #e3f2fd; /* Light blueish background */
+    border: 1px solid #bbdefb; /* Faint blue border */
+}
+
+/* Grid for the main element: 1 column for mobile */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Section styling inside cards */
+section {
+    padding: 1rem;
+    background-color: white;
+}
