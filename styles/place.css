@@ -1,0 +1,163 @@
+:root {
+    /* Color Palette - High Contrast AA standards */
+    --primary-color: #006738;
+    --secondary-color: #FFDF00;
+    --text-color: #333333;
+    /* Translucent white background for desktop frosted glass effect */
+    --card-bg: rgba(255, 255, 255, 0.75); 
+    --font-stack: 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-stack);
+    color: var(--text-color);
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+/* --- MOBILE LAYOUT --- */
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* Smooth rounded corners for mobile cards */
+    padding: 1.25rem;
+    margin: 1rem 1.25rem 0 1.25rem;
+    text-align: center;
+    overflow: hidden; /* Ensures child elements don't bleed out of rounded edges */
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.25rem;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+.weather-svg-container {
+    display: block;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+.modified {
+    color: var(--secondary-color);
+    margin-top: 0.25rem;
+}
+
+/* ---- WIDER VIEW / DESKTOP LAYOUT (Full-width adjustments) ---- */
+@media (min-width: 800px) {
+    header {
+        background-color: var(--primary-color);
+        border-bottom: 5px solid var(--secondary-color);
+    }
+
+    .hero-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        line-height: 0; /* Eliminates the residual whitespace beneath the image */
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 620px;
+        display: block;
+    }
+
+    /* Absolute positioning properties for desktop layouts */
+    .card {
+        position: absolute;
+        background-color: var(--card-bg); 
+        border: none;
+        border-radius: 12px; /* Elegant rounded corners for desktop overlays */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        width: 320px;
+        margin: 0;
+        text-align: left;
+        line-height: 1.6; /* Restores readability inside the container */
+    }
+
+    .card h2 {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        padding: 0.6rem 1rem;
+        margin-bottom: 1rem;
+        border-bottom: none;
+    }
+
+    .card ul {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    /* DATA CARD: Anchored strictly to the upper left section */
+    .data-card {
+        top: 50px; 
+        left: 50px;
+    }
+
+    /* WEATHER CARD: Anchored strictly to the bottom right section */
+    .weather-card {
+        bottom: 50px; 
+        right: 50px;
+    }
+
+    /* Viewport-specific responsive components */
+    .weather-svg-container {
+        display: none;
+    }
+
+    .weather-title::after {
+        content: " ⛅";
+    }
+}
