@@ -49,15 +49,14 @@ header h1 {
 /* Mobile navigation list */
 .navigation {
   list-style: none;
-  display: none; /* Hides the menu by default on mobile views */
+  display: none; 
   flex-direction: column;
   background-color: #0d1b2a;
   margin-top: 1rem;
 }
 
-/* This rule triggers only when JavaScript injects the 'open' class */
-.navigation.open {
-  display: flex; /* Displays the menu items in vertical rows */
+.navigation.show {
+  display: flex; 
 }
 
 .navigation a {
@@ -172,14 +171,14 @@ footer p {
 /* This media query wraps all mobile logic so it NEVER touches your desktop screen */
 @media (max-width: 768px) {
   /* 1. Force the menu to display ONLY when JavaScript adds the .show class */
-  .navigation.show {
-    display: flex !important;
-    flex-direction: column !important;
+  body header nav ul.navigation.show {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 65px; /* Adjust this value if it collides with your header height */
+    top: 65px; 
     left: 0;
     width: 100%;
-    background-color: #0b1d33; /* Matches your original header dark blue color */
+    background-color: #0b1d33; 
     z-index: 1000;
     padding: 10px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -199,4 +198,16 @@ footer p {
     color: white;
     text-decoration: none;
   }
+}
+
+/* hide the visually hidden element from all users, but keep it accessible to screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
