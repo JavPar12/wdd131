@@ -1,0 +1,54 @@
+/* Media query to ensure these styles only apply to screens wider than 600px */
+@media (min-width: 600px) {
+
+    /* 1. DISABLE MOBILE LAYOUT CONTROLS */
+    #menu {
+        display: none;
+    }
+
+    /* 2. HEADER RESTRUCTURE */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        text-align: left;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    /* 3. TRANSFORMS MENU TO HORIZONTAL ROW DIRECTION */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+    }
+
+    .navigation a:hover {
+        background-color: transparent; 
+        color: #9c77eb3c; 
+    }
+
+    /* 4. 3-COLUMN LAYOUT DESKTOP GRID SYSTEM */
+    main {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    figure img {
+        height: 200px;
+    }
+} /* CRUCIAL: This closing bracket closes the @media block */
