@@ -20,9 +20,10 @@ header {
   position: relative; /* Allows the menu button to position absolutely relative to the header */
 }
 
-header h1 {
+header .header-title {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  font-weight: bold; /* Para mantener el grosor de un h1 */
 }
 
 /* Hamburger menu button */
@@ -210,4 +211,8 @@ footer p {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+nav {
+    display: flex;
 }
