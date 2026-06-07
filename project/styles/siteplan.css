@@ -1,0 +1,86 @@
+/* --- SITEPLAN.CSS: FINAL COMPLETE VERSION --- */
+
+/* Color variables for consistency */
+:root {
+    --primary-bg: #1B2631;       /* Deep Navy Blue */
+    --accent-color: #FFBD59;     /* Vibrant Orange */
+    --text-color: #FDFEFE;       /* Soft White */
+    --font-main: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* General body styling */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header and typography headers */
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+h1, h2 {
+    font-family: var(--font-main);
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+/* Section container styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+/* --- WIREFRAME GRID: FINAL ENFORCED SIZES --- */
+
+/* Desktop Grid: Fixed 250px columns */
+.wireframe-grid.desktop {
+    display: grid !important;
+    grid-template-columns: 250px 250px !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 20px auto !important;
+}
+
+/* Desktop Images: Forced 250px width */
+.wireframe-grid.desktop img {
+    width: 250px !important;
+    max-width: 250px !important;
+    height: auto !important;
+    display: block !important;
+    border: 3px solid var(--accent-color) !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+}
+
+/* Mobile Grid: Fixed 150px columns */
+.wireframe-grid.mobile {
+    display: grid !important;
+    grid-template-columns: 150px 150px !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 20px auto !important;
+}
+
+/* Mobile Images: Forced 150px width */
+.wireframe-grid.mobile img {
+    width: 150px !important;
+    max-width: 150px !important;
+    height: auto !important;
+    display: block !important;
+    border: 3px solid var(--accent-color) !important;
+    border-radius: 8px !important;
+    object-fit: contain !important;
+}
