@@ -1,0 +1,82 @@
+/* General page and typography */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Footer: Dark purple background */
+header, footer {
+    background-color: #330033;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Main form container: Grey background and centered */
+main {
+    background-color: #dcdcdc;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Form layout */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+/* Flexbox containers for alignment */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input-group input {
+    margin-right: 10px;
+}
+
+.input-group label {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    font-weight: bold;
+    cursor: pointer;
+}

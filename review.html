@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form. Share your experience with our products.">
+    <title>Review Submitted | ISO Libre</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Thank you for your review!</h1>
+    </header>
+    <main>
+        <p>Your feedback has been recorded.</p>
+        <p>Total reviews completed: <span id="counter">0</span></p>
+        <a href="form.html">Leave another review</a>
+    </main>
+    <footer>
+        <p>&copy; 2026 ISO Libre | Javier Pardo</p>
+    </footer>
+
+    <script>
+        // Get query parameters from URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Increment count only if the form was submitted
+        if (params.has('productName')) {
+            let numReviews = parseInt(localStorage.getItem("reviewsCount") || 0);
+            numReviews++;
+            localStorage.setItem("reviewsCount", numReviews);
+
+            // Prevent count incrementing on page refresh
+            window.history.replaceState(null, null, window.location.pathname);
+        }
+
+        // Display current total
+        const total = localStorage.getItem("reviewsCount") || 0;
+        document.querySelector("#counter").textContent = total;
+    </script>
+</body>
+</html>

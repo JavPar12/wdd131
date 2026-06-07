@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review form. Share your experience with our products.">
+    <title>Product Review | ISO Libre</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="radio-group">
+                    <input type="radio" id="r1" name="rating" value="1" required><label for="r1">☆</label>
+                    <input type="radio" id="r2" name="rating" value="2" required><label for="r2">☆☆</label>
+                    <input type="radio" id="r3" name="rating" value="3" required><label for="r3">☆☆☆</label>
+                    <input type="radio" id="r4" name="rating" value="4" required><label for="r4">☆☆☆☆</label>
+                    <input type="radio" id="r5" name="rating" value="5" required><label for="r5">☆☆☆☆☆</label>
+                </div>
+            </fieldset>
+
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <fieldset>
+                <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
+                <div class="input-group">
+                    <input type="checkbox" id="durability" name="feature" value="durability"><label for="durability">Durability</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" id="ease" name="feature" value="ease"><label for="ease">Ease of Use</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" id="performance" name="feature" value="performance"><label for="performance">Performance</label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" id="design" name="feature" value="design"><label for="design">Design</label>
+                </div>
+            </fieldset>
+
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="userName">User Name</label>
+            <input type="text" id="userName" name="userName">
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 ISO Libre | Javier Pardo</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
