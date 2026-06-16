@@ -394,15 +394,14 @@ a {
 }
 
 .gallery__back {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  margin-bottom: 2.5rem;
-  width: fit-content;
-  transition: opacity var(--ease);
-  color: var(--gray);
-}
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        color: gray; 
+    }
 
 .gallery__back:hover {
   opacity: 0.6;

@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = document.querySelector(`.category-card[data-category="${savedCategory}"]`);
     if (card) card.click();
   }
-  
+
   // ==========================================
   // HOME SLIDER (only in index.html)
   // ==========================================
@@ -117,6 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const galleryGrid = document.getElementById("galleryGrid");
   const galleryTitle = document.getElementById("galleryTitle");
   const btnBack = document.getElementById("btnBack");
+
+  if (btnBack) {
+  btnBack.addEventListener("click", () => {
+    viewGallery.style.display = "none";
+    viewCategories.style.display = "block";
+    localStorage.removeItem("lastViewedCategory"); // Limpiamos para que no se autocarque al recargar
+  });
+}
 
   if (viewCategories && viewGallery) {
     let currentPhotos = [];
