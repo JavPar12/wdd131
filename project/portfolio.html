@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="ISO LIBRE — Photographer and filmmaker based in Mexico City. Available for portrait, event, cinematic and studio projects in CDMX and worldwide.">
+    <meta name="theme-color" content="#1B2631">
+    <title>ISO LIBRE | Portfolio</title>
+    <link rel="stylesheet" href="styles/portfolio.css">
+  </head>
+  <body>
+    <!-- ============================================
+        NAVBAR
+        ============================================ -->
+    <header class="navbar">
+      <a href="index.html" class="navbar__logo">
+        <img src="images/logo.png" alt="ISO LIBRE logo">
+      </a>
+      <nav class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="portfolio.html" class="navbar__link navbar__link--active"
+          >Portfolio</a>
+        <a href="contact.html" class="navbar__btn">Contact</a>
+      </nav>
+      <button
+        class="navbar__hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav__link">Home</a>
+      <a href="portfolio.html" class="mobile-nav__link">Portfolio</a>
+      <a href="contact.html" class="mobile-nav__link">Contact</a>
+    </div>
+
+    <!-- ============================================
+        MAIN
+        ============================================ -->
+    <main>
+      <!-- VIEW 1: CATEGORIES GRID -->
+      <div class="categories" id="viewCategories">
+        <div class="categories__grid">
+          <div class="category-card" data-category="portraits">
+            <img src="images/portrait35.jpg" alt="Portraits">
+            <div class="category-card__overlay">
+              <span class="category-card__title">PORTRAITS</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-category="events">
+            <img src="images/portrait74.jpg" alt="Events">
+            <div class="category-card__overlay">
+              <span class="category-card__title">EVENTS</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-category="cinematic">
+            <img src="images/portrait3.jpg" alt="Cinematic">
+            <div class="category-card__overlay">
+              <span class="category-card__title">CINEMATIC</span>
+            </div>
+          </div>
+
+          <div class="category-card" data-category="studio">
+            <img src="images/portrait8.jpg" alt="Studio">
+            <div class="category-card__overlay">
+              <span class="category-card__title">STUDIO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: GALLERY (hidden by default, shown by JS) -->
+      <section class="gallery" id="viewGallery" style="display: none">
+        <!-- Back button -->
+        <div class="gallery__back" id="btnBack">
+          <span class="gallery__back-arrow">&#10094;</span>
+          <span class="gallery__back-text">BACK TO CATEGORIES</span>
+        </div>
+
+        <!-- Category title -->
+        <h1 class="gallery__title" id="galleryTitle">PORTRAITS</h1>
+
+        <!-- Photo grid -->
+        <div class="gallery__grid" id="galleryGrid"></div>
+      </section>
+
+            <!-- LIGHTBOX MODAL -->
+        <div class="lightbox" id="lightbox" style="display: none">
+        <button class="lightbox__close" id="lightboxClose">&#10005;</button>
+        <button class="lightbox__btn lightbox__btn--prev" id="lightboxPrev">
+            &#10094;
+        </button>
+        <img class="lightbox__img" id="lightboxImg" src="about:blank" alt="Project image">
+        <button class="lightbox__btn lightbox__btn--next" id="lightboxNext">
+            &#10095;
+        </button>
+        </div>
+    </main>
+    <!-- ============================================
+       FOOTER
+  ============================================ -->
+    <footer class="footer">
+      <p class="footer__text">&copy; 2026 ISO LIBRE. All rights reserved.</p>
+      <nav class="footer__links">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="portfolio.html" class="footer__link">Portfolio</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+        <a href="references.html" class="footer__link">References</a>
+      </nav>
+    </footer>
+
+    <script src="scripts/portfolio.js"></script>
+  </body>
+</html>

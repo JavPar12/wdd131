@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;500&display=swap"
+      rel="stylesheet">
+    <meta
+      name="description"
+      content="ISO LIBRE — Photographer and filmmaker based in Mexico City. Available for portrait, event, cinematic and studio projects in CDMX and worldwide.">
+    <meta name="theme-color" content="#1B2631">
+    <title>ISO LIBRE | Photography</title>
+    <link rel="stylesheet" href="styles/portfolio.css">
+  </head>
+  <body>
+    <!-- ============================================
+       NAVBAR
+        ============================================ -->
+    <header class="navbar">
+      <a href="index.html" class="navbar__logo">
+        <img src="images/logo.png" alt="ISO LIBRE logo">
+      </a>
+      <nav class="navbar__links">
+        <a href="index.html" class="navbar__link navbar__link--active">Home</a>
+        <a href="portfolio.html" class="navbar__link">Portfolio</a>
+        <a href="contact.html" class="navbar__btn">Contact</a>
+      </nav>
+      <button
+        class="navbar__hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="mobile-nav__link">Home</a>
+      <a href="portfolio.html" class="mobile-nav__link">Portfolio</a>
+      <a href="contact.html" class="mobile-nav__link">Contact</a>
+    </div>
+
+    <!-- ============================================
+         MAIN
+        ============================================ -->
+    <main>
+      <!-- WHO I AM -->
+      <section class="about">
+        <h1 class="about__title">WHO I AM...</h1>
+        <p class="about__text">
+          Photographer &amp; filmmaker based in Mexico City. I capture stories
+          through light, movement, and emotion — available for projects in CDMX
+          and worldwide.
+        </p>
+      </section>
+
+      <!-- SLIDER -->
+      <div class="slider">
+        <button class="slider__btn slider__btn--prev" aria-label="Previous">
+          &#10094;
+        </button>
+        <div class="slider__wrap">
+          <div class="slider__track" id="sliderTrack"></div>
+          <div class="slider__dots" id="sliderDots"></div>
+          <p class="slider__hint">Click to explore portfolio</p>
+        </div>
+        <button class="slider__btn slider__btn--next" aria-label="Next">
+          &#10095;
+        </button>
+      </div>
+    </main>
+
+    <!-- ============================================
+       FOOTER
+        ============================================ -->
+    <footer class="footer">
+      <p class="footer__text">&copy; 2026 ISO LIBRE. All rights reserved.</p>
+      <nav class="footer__links">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="portfolio.html" class="footer__link">Portfolio</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+        <a href="references.html" class="footer__link">References</a>
+      </nav>
+    </footer>
+
+    <script src="scripts/portfolio.js"></script>
+  </body>
+</html>
