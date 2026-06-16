@@ -45,6 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const savedCategory = localStorage.getItem("lastViewedCategory");
+  if (savedCategory) {
+    const card = document.querySelector(`.category-card[data-category="${savedCategory}"]`);
+    if (card) card.click();
+  }
+  
   // ==========================================
   // HOME SLIDER (only in index.html)
   // ==========================================
@@ -119,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".category-card").forEach((card) => {
       card.addEventListener("click", () => {
         const key = card.dataset.category;
+        localStorage.setItem("lastViewedCategory", key);
         const cat = CATEGORIES[key];
 
         galleryTitle.textContent = cat.label;
@@ -137,12 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
         viewGallery.style.display = "block";
         window.scrollTo(0, 0);
       });
-    });
-
-    btnBack.addEventListener("click", () => {
-      viewGallery.style.display = "none";
-      viewCategories.style.display = "block";
-      window.scrollTo(0, 0);
     });
 
     // LIGHTBOX
@@ -227,13 +228,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1000);
     });
   }
-});
-
-
-localStorage.setItem("lastViewedCategory", category);
-window.addEventListener('DOMContentLoaded', () => {
-    const savedCategory = localStorage.getItem("lastViewedCategory");
-    if (savedCategory) {
-        filterProjects(savedCategory); 
-    }
 });
