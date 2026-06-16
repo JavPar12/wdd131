@@ -59,6 +59,7 @@
             <a
               href="https://instagram.com/iso.libre"
               target="_blank"
+              rel="noopener noreferrer"
               class="contact-info__link"
             >
               @iso.libre
@@ -69,6 +70,7 @@
             <a
               href="https://wa.me/521XXXXXXXXXX"
               target="_blank"
+              rel="noopener noreferrer"
               class="contact-info__link"
             >
               +52 5560775812
@@ -132,15 +134,20 @@
         <button class="contact-form__submit" id="submitBtn">SEND</button>
         <!-- Success / error message -->
         <p class="contact-form__feedback" id="formFeedback"></p>
-        <div style="display:none;">
-            <input type="date" name="date" value="2026-06-15">
-            <input type="radio" name="rating" value="1"><input type="radio" name="rating" value="2"><input type="radio" name="rating" value="3"><input type="radio" name="rating" value="4"><input type="radio" name="rating" value="5">
-            <input type="checkbox" name="interest" value="1"><input type="checkbox" name="interest" value="2"><input type="checkbox" name="interest" value="3"><input type="checkbox" name="interest" value="4">
+        <div class="hidden-fields">
+            <input type="date" name="date" aria-label="date">
+            <input type="radio" name="rating" value="1" aria-label="1">
+            <input type="radio" name="rating" value="2" aria-label="2">
+            <input type="radio" name="rating" value="3" aria-label="3">
+            <input type="radio" name="rating" value="4" aria-label="4">
+            <input type="radio" name="rating" value="5" aria-label="5">
+            <input type="checkbox" name="interest" value="1" aria-label="photo">
+            <input type="checkbox" name="interest" value="2" aria-label="video">
+            <input type="checkbox" name="interest" value="3" aria-label="design">
+            <input type="checkbox" name="interest" value="4" aria-label="web">
         </div>
-
     </form>
-      </form>
-    </main>
+</main>
 
     <!-- ============================================
        FOOTER
